@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --color-sanguo-red: #E53E3E;
+  --color-sanguo-gold: #ECC94B;
+  --color-sanguo-brown: #744210;
+  --color-sanguo-bg: #FFF5F5;
+  
+  --font-chinese: 'Zhi Mang Xing', 'Ma Shan Zheng', cursive, sans-serif;
+}
+
+body {
+  font-family: 'Zhi Mang Xing', 'Ma Shan Zheng', cursive, sans-serif;
+  background-color: var(--color-sanguo-bg);
+  color: var(--color-sanguo-brown);
+  overflow-x: hidden;
+}
+
+.chinese-text {
+  font-family: 'Ma Shan Zheng', cursive;
+}
+
+/* Custom animations */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+.shake-animation {
+  animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+}
