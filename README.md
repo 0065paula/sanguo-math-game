@@ -1,73 +1,140 @@
-# React + TypeScript + Vite
+# 🎮 三国算术传
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![Vercel Deploy](https://img.shields.io/badge/在线试玩-点击进入-brightgreen)](https://sanguo-math-game.vercel.app)
 
-Currently, two official plugins are available:
+一个专为小朋友设计的三国主题口算游戏，让枯燥的数学练习变成有趣的武将闯关！
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🎯 游戏特色
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 📚 数学练习
+- **100以内加减法** — 从简单到困难逐步提升
+- **乘法口诀表** — 巩固 1-9 乘法基础
+- **混合运算** — 综合挑战，全面训练
 
-## Expanding the ESLint configuration
+### ⚔️ 三国武将系统
+| 武将 | 解锁条件 | 特殊技能 |
+|------|----------|----------|
+| 🤴 刘备 | 初始可用 | 仁德：30%概率回血 |
+| 🦁 张飞 | 300分 | 咆哮：30%概率暴击 |
+| 🐉 关羽 | 800分 | 武圣：攻击力1.5倍 |
+| 🦄 赵云 | 1500分 | 龙胆：30%概率闪避 |
+| 🪶 诸葛亮 | 2500分 | 智谋：时间减缓 |
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 🏰 五大关卡
+1. 🍑 **桃园结义** — 20以内加法（黄巾兵）
+2. 🏛️ **涿郡义兵** — 50以内减法（程远志）
+3. 🐯 **三英战吕布** — 100以内混合（吕布）
+4. 🏯 **许昌练兵** — 乘法口诀（曹操）
+5. 🔥 **赤壁之战** — 综合终极挑战（百万曹军）
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🎮 游戏玩法
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 1️⃣ 选择武将
+- 首次游戏只能选择刘备
+- 积累分数解锁更多武将
+- 每位武将有独特的战斗技能
+
+### 2️⃣ 选择关卡
+- 点击地图上的城池进入关卡
+- 不同关卡对应不同的数学题型
+- 从简单的桃园开始挑战
+
+### 3️⃣ 战斗答题
+- 屏幕中央显示算术题
+- 在输入框中填入答案
+- 点击「确认答题」或按 **Enter** 提交
+
+### 4️⃣ 胜负判定
+- ✅ **答对** = 攻击敌军，敌人扣血
+- ❌ **答错** = 敌军反击，武将扣血
+- 🔥 **连胜** = 攻击力加成
+- 🏆 **击败敌军** = 通关并获得积分
+
+---
+
+## 💻 技术栈
+
+- **React 19** — 前端框架
+- **TypeScript** — 类型安全
+- **Vite** — 构建工具
+- **Tailwind CSS** — 样式
+- **Framer Motion** — 动画效果
+
+---
+
+## 🚀 本地运行
+
+```bash
+# 克隆项目
+git clone https://github.com/0065paula/sanguo-math-game.git
+
+# 进入目录
+cd sanguo-math-game
+
+# 安装依赖
+npm install
+
+# 启动开发服务器
+npm run dev
+
+# 浏览器访问 http://localhost:5173
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 📱 支持设备
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- ✅ iPhone / iPad
+- ✅ Android 手机/平板
+- ✅ 电脑浏览器
+
+**推荐**：手机或 iPad 上游玩，触屏操作更方便！
+
+---
+
+## 🌐 在线访问
+
+**直接访问**: https://sanguo-math-game.vercel.app
+
+无需下载，打开即玩！
+
+---
+
+## 📸 游戏截图
+
+| 武将选择 | 关卡地图 | 战斗界面 |
+|----------|----------|----------|
+| [截图1] | [截图2] | [截图3] |
+
+---
+
+## 🎨 设计初衷
+
+这款游戏专为**喜欢三国但不喜欢口算**的小朋友设计：
+
+- 🎯 用三国武将和城池包装数学题
+- ⚔️ 把答题变成战斗，答对=攻击
+- 🏆 积分解锁武将，持续有新鲜感
+- 📱 手机/iPad 随时练习
+
+让小朋友在游戏中不知不觉提高口算能力！
+
+---
+
+## 🤝 贡献
+
+欢迎提交 Issue 或 PR！
+
+---
+
+## 📄 许可
+
+MIT License
+
+---
+
+**🎉 快叫小朋友来挑战吧！**
