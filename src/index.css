@@ -1,20 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap');
 @import 'tailwindcss';
 
+:root {
+  --sanguo-red: #E53E3E;
+  --sanguo-gold: #ECC94B;
+  --sanguo-brown: #744210;
+  --sanguo-bg: #FFF5F5;
+}
+
 @theme {
   --color-sanguo-red: #E53E3E;
   --color-sanguo-gold: #ECC94B;
   --color-sanguo-brown: #744210;
   --color-sanguo-bg: #FFF5F5;
-  
   --font-chinese: 'Zhi Mang Xing', 'Ma Shan Zheng', cursive, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  min-height: 100vh;
+  width: 100%;
 }
 
 body {
   font-family: 'Zhi Mang Xing', 'Ma Shan Zheng', cursive, sans-serif;
-  background-color: var(--color-sanguo-bg);
-  color: var(--color-sanguo-brown);
+  background-color: #FFF5F5;
+  color: #744210;
   overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
 }
 
 .chinese-text {
@@ -30,4 +51,18 @@ body {
 
 .shake-animation {
   animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E53E3E;
+  border-radius: 4px;
 }
