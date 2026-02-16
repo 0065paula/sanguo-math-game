@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap');
 @import 'tailwindcss';
 
 :root {
@@ -13,7 +12,7 @@
   --color-sanguo-gold: #ECC94B;
   --color-sanguo-brown: #744210;
   --color-sanguo-bg: #FFF5F5;
-  --font-chinese: 'Zhi Mang Xing', 'Ma Shan Zheng', cursive, sans-serif;
+  --font-chinese: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', sans-serif;
 }
 
 * {
@@ -28,7 +27,7 @@ html, body, #root {
 }
 
 body {
-  font-family: 'Zhi Mang Xing', 'Ma Shan Zheng', cursive, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', sans-serif;
   background-color: #FFF5F5;
   color: #744210;
   overflow-x: hidden;
@@ -36,10 +35,6 @@ body {
 
 #root {
   min-height: 100vh;
-}
-
-.chinese-text {
-  font-family: 'Ma Shan Zheng', cursive;
 }
 
 /* Custom animations */
